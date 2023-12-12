@@ -83,8 +83,10 @@ while True:
     #announcement_thread.start()
 
     cv2.imshow('frame', frame)
-    cv2.waitKey(1)
-
+    
+    # Check for the 'q' key
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 
 cap.release()
 cv2.destroyAllWindows()

@@ -84,7 +84,6 @@ while True:
 
     cv2.imshow('frame', frame)
     
-    # Check for the 'q' key
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 

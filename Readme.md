@@ -73,8 +73,15 @@ This will create the model name model.p
 
 7. Now open project folder and run app.py. 
 
-![labels_dict](image.png)
+   - You will see labels_dict variable, but it should be empty 
+   ![labels_dict](image.png)
+   - Customize your labes_dict like this, number keys is equal to number_of _classes and values is the name of hand symbol you are showing there. 
 
+8. You can also run interference_classifier but it has some bugs currently, you need to install these before running it.
+
+```bash
+pip install pyttsx3
+```
 
 ### Directory Structure
 
@@ -114,7 +121,17 @@ The captured frames will be organized in the data directory :
 - Press "Q" again to move to the next class.
 - Make sure your image files are organized in the `./data` directory with subdirectories representing different classes.
 - The script utilizes the MediaPipe library to extract hand landmarks, and it assumes that images contain hands with sufficient visibility.
+- Ensure that the data.pickle file is present in the project directory.
+- The script uses the scikit-learn library for training and evaluating the Random Forest classifier.
+- You can adjust the test_size parameter in the train_test_split function to modify the training/testing split ratio.
+- The app uses the model.p file to load the pre-trained Random Forest classifier.
+- The mediapipe library is used to detect hand landmarks, and the results are overlaid on the video feed.
+- The predicted hand gesture is displayed in real-time on the web interface.
 
-### Acknowledgments
+### Remark
 
-This code is a basic template for capturing a gesture dataset. Feel free to customize and extend it based on your specific requirements.
+Feel free to customize the scripts based on your specific requirements. You can modify the dataset creation process, experiment with different classifiers, or integrate additional features for a more robust hand gesture recognition system
+
+## Issues and Contributions
+
+If you encounter any issues or would like to contribute to the project, please open an issue or submit a pull request on the GitHub repository.

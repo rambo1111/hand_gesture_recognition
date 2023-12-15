@@ -5,8 +5,8 @@ DATA_DIR = './data'
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
-number_of_classes = 6
-dataset_size = 100
+number_of_classes = int(input('Enter number of signs: '))
+dataset_size = int(input('Enter number of frames to be captured per sign: '))
 
 cap = cv2.VideoCapture(0)
 for j in range(number_of_classes):

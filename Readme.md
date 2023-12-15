@@ -52,6 +52,8 @@ python collect_imgs.py
 
    - Enter the number of signs (classes) you want to capture.
    - Enter the number of frames to be captured per sign.
+   - when camera starts put your hand out and show it to camera, just bring back and forth your hand to record your data
+   - repeat the steps with different hand styles.
 
    The script will then prompt you to press "Q" when you are ready to start capturing frames.
 
@@ -68,6 +70,11 @@ This will create a binary file data.pickle
 python train_classifier.py
 ```
 This will create the model name model.p
+
+7. Now open project folder and run app.py. 
+
+![labels_dict](https://ibb.co/jk1MB1M)
+
 ### Directory Structure
 
 Data directory will be created after executing (collect_imgs.py) 

@@ -73,7 +73,8 @@ This will create the model name model.p
 
 7. Now open project folder and run app.py. 
 
-![labels_dict](https://postimg.cc/R6gbTgzX)
+![labels_dict](./images.png)
+
 
 ### Directory Structure
 

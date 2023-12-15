@@ -2,19 +2,19 @@ import pickle
 import cv2
 import mediapipe as mp
 import numpy as np
-#import pyttsx3
-#import threading
+import pyttsx3
+import threading
 
 # Function to handle text-to-speech in a separate thread
-#def announce_in_thread():
+def announce_in_thread():
     # Announce the predicted character
-    #engine.say(predicted_character)
+    engine.say(predicted_character)
 
     # Wait for the announcement to finish
-    #engine.runAndWait()
+    engine.runAndWait()
 
 # Initialize the text-to-speech engine
-#engine = pyttsx3.init()
+engine = pyttsx3.init()
 
 model_dict = pickle.load(open('./model.p', 'rb'))
 model = model_dict['model']
@@ -79,8 +79,8 @@ while True:
                     cv2.LINE_AA)
 
     # Create a thread to handle the text-to-speech announcement
-    #announcement_thread = threading.Thread(target=announce_in_thread)
-    #announcement_thread.start()
+    announcement_thread = threading.Thread(target=announce_in_thread)
+    announcement_thread.start()
 
     cv2.imshow('frame', frame)
     

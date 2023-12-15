@@ -77,10 +77,14 @@ This will create the model name model.p
    ![labels_dict](image.png)
    - Customize your labes_dict like this, number keys is equal to number_of _classes and values is the name of hand symbol you are showing there. 
 
-8. You can also run interference_classifier but it has some bugs currently, you need to install these before running it.
+8. You can also run interference_classifier but it has some bugs currently, you need to install this package before running it.
 
 ```bash
 pip install pyttsx3
+```
+
+```bash
+python interference_classifier.py
 ```
 
 ### Directory Structure

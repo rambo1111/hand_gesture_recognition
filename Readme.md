@@ -2,13 +2,13 @@
 
 ### Introduction
 
-This project is designed to capture hand gestures through a webcam, create a dataset for training a machine learning model, train a Random Forest classifier to recognize these gestures, and finally, deploy a Flask web application that performs real-time hand gesture recognition. The entire workflow is divided into four key scripts: collecting data ('collect_imgs.py') dataset creation ('create_dataset.py;), model training ('train_classifier.py'), and web application deployment ('app.py') in project directory, which utilizes a pre-trained model saved in model.p.
+This project is designed to capture hand gestures through a webcam, create a dataset for training a machine learning model, train a Random Forest classifier to recognize these gestures, and finally, deploy a Flask web application that performs real-time hand gesture recognition. The entire workflow is divided into four key scripts: collecting data (collect_imgs.py) dataset creation (create_dataset.py), model training (train_classifier.py), and web application deployment (app.py) in project directory, which utilizes a pre-trained model saved in model.p.
 
 
 
 ### Prerequisites
 
-Make sure you have the following installed before running the script:
+Make sure you have the following installed before running the scripts:
 
 - Python
 - OpenCV (cv2)
@@ -17,7 +17,7 @@ Make sure you have the following installed before running the script:
 - Numpy
 - Flask
 
-You can install OpenCV using the following command:
+You can install prerequisites using the following command:
 
 ```bash
 pip install opencv-python
@@ -42,7 +42,7 @@ git clone https://github.com/your-username/hand_gesture_recognition.git
 cd hand_gesture_recognition
 ```
 
-3. Run the script:
+3. Run thi script:
 
 ```bash
 python collect_imgs.py
@@ -55,15 +55,23 @@ python collect_imgs.py
 
    The script will then prompt you to press "Q" when you are ready to start capturing frames.
 
-5. Now run the script:
+5. Now run this script:
 
 ```bash
 python create_dataset.py
 ```
+This will create a binary file data.pickle
 
+6. Now run this script:
+
+```bash
+python train_classifier.py
+```
+This will create the model name model.p
 ### Directory Structure
 
-The captured frames will be organized in the following directory structure:
+Data directory will be created after executing (collect_imgs.py) 
+The captured frames will be organized in the data directory :
 
 ```
 - code
@@ -91,13 +99,13 @@ The captured frames will be organized in the following directory structure:
    - app.py
 ```
 
-Each subdirectory corresponds to a class (sign), and the frames for that class are saved as individual image files within the respective subdirectory.
-
 ### Notes
 
 - Press "Q" to start capturing frames for each class.
 - The webcam feed will be displayed, and frames will be saved on keypress.
 - Press "Q" again to move to the next class.
+- Make sure your image files are organized in the `./data` directory with subdirectories representing different classes.
+- The script utilizes the MediaPipe library to extract hand landmarks, and it assumes that images contain hands with sufficient visibility.
 
 ### Acknowledgments
 

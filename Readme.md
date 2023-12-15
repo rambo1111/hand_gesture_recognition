@@ -96,7 +96,7 @@ The captured frames will be organized in the data directory :
 - code
   - collect_imgs.py
   - create_dataset.py
-  - interference_classifier.py <!-- this file is under development -->
+  - interference_classifier.py (this file is under development)
   - train_classifier.py
 
 - data

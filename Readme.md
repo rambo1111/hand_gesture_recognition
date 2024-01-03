@@ -74,7 +74,7 @@ This will create the model name model.p
 7. Now open project folder and run app.py. 
 
    - You will see labels_dict variable, but it should be empty 
-   [labels_dict](https://github.com/rambo1111/hand_gesture_recognition/image.png)
+   [labels_dict](https://github.com/rambo1111/hand_gesture_recognition/blob/main/image.png)
    - Customize your labes_dict like this, number keys is equal to number_of _classes and values is the name of hand symbol you are showing there. 
 
 8. You can also run interference_classifier but it has some bugs currently, you need to install this package before running it.

@@ -138,4 +138,4 @@ Feel free to customize the scripts based on your specific requirements. You can 
 
 ## Issues and Contributions
 
-If you encounter any issues or would like to contribute to the project, please open an issue or submit a pull request on the GitHub repository.
+If you encounter any issues or would like to contribute to the project, please open an issue or submit a pull request on the GitHub repository
